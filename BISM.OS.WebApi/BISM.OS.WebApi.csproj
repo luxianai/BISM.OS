@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.2" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.4.0" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="4.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BISM.OS.Cache\BISM.OS.Cache.csproj" />
+    <ProjectReference Include="..\BISM.OS.Common\BISM.OS.Common.csproj" />
+    <ProjectReference Include="..\BISM.OS.Domain\BISM.OS.Domain.csproj" />
+    <ProjectReference Include="..\BISM.OS.Ioc\BISM.OS.Ioc.csproj" />
+    <ProjectReference Include="..\BISM.OS.IRepository\BISM.OS.IRepository.csproj" />
+    <ProjectReference Include="..\BISM.OS.IService\BISM.OS.IService.csproj" />
+    <ProjectReference Include="..\BISM.OS.Mapping\BISM.OS.Mapping.csproj" />
+    <ProjectReference Include="..\BISM.OS.Repository\BISM.OS.Repository.csproj" />
+    <ProjectReference Include="..\BISM.OS.Service\BISM.OS.Service.csproj" />
+  </ItemGroup>
+
+</Project>

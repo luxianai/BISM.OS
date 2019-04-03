@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BISM.OS.DatabaseCore\BISM.OS.DatabaseCore.csproj" />
+    <ProjectReference Include="..\BISM.OS.Entity\BISM.OS.Entity.csproj" />
+    <ProjectReference Include="..\BISM.OS.IRepository\BISM.OS.IRepository.csproj" />
+  </ItemGroup>
+
+</Project>
