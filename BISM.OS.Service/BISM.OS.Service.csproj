@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BISM.OS.Common\BISM.OS.Common.csproj" />
     <ProjectReference Include="..\BISM.OS.Entity\BISM.OS.Entity.csproj" />
     <ProjectReference Include="..\BISM.OS.IService\BISM.OS.IService.csproj" />
     <ProjectReference Include="..\BISM.OS.Repository\BISM.OS.Repository.csproj" />

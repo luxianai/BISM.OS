@@ -11,6 +11,7 @@ namespace BISM.OS.Repository
     {
         public int Add(Users entity)
         {
+            // var db = CurrentDb.FullClient;
             return 1;
         }
 

@@ -1,16 +1,16 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="sqlSugarCore" Version="4.9.9.3" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BISM.OS.Cache\BISM.OS.Cache.csproj" />
     <ProjectReference Include="..\BISM.OS.Common\BISM.OS.Common.csproj" />
-    <ProjectReference Include="..\BISM.OS.Entity\BISM.OS.Entity.csproj" />
   </ItemGroup>
 
 </Project>

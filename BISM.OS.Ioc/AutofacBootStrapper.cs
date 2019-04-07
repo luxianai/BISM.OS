@@ -1,4 +1,6 @@
 ﻿using Autofac;
+using Microsoft.Extensions.Logging.Abstractions;
+using System;
 using System.Linq;
 using System.Reflection;
 
@@ -12,6 +14,9 @@ namespace BISM.OS.Ioc
             //重写Autofac管道Load方法，在这里注册注入
             protected override void Load(ContainerBuilder builder)
             {
+                // 注册缓存
+                builder.Register(c => new NullLogger(Console.Out));
+
                 // 注册Cache中的对象,Service中的类要以Service结尾，否则注册失败
                 builder.RegisterAssemblyTypes(GetAssemblyByName("BISM.OS.Cache")).Where(a => a.Name.EndsWith("Service")).AsImplementedInterfaces();
 

@@ -39,7 +39,7 @@ namespace BISM.OS.Cache
         /// <param name="key">缓存Key</param>
         /// <param name="value">缓存Value</param>
         /// <returns></returns>
-        public bool Add(string key, object value)
+        public bool Set(string key, object value)
         {
             if (key == null)
             {
@@ -61,7 +61,7 @@ namespace BISM.OS.Cache
         /// <param name="expiresSliding">滑动过期时长（如果在过期时间内有操作，则以当前时间点延长过期时间）</param>
         /// <param name="expiressAbsoulte">绝对过期时长</param>
         /// <returns></returns>
-        public bool Add(string key, object value, TimeSpan expiresSliding, TimeSpan expiressAbsoulte)
+        public bool Set(string key, object value, TimeSpan expiresSliding, TimeSpan expiressAbsoulte)
         {
             if (key == null)
             {
@@ -87,7 +87,7 @@ namespace BISM.OS.Cache
         /// <param name="expiresIn">缓存时长</param>
         /// <param name="isSliding">是否滑动过期（如果在过期时间内有操作，则以当前时间点延长过期时间）</param>
         /// <returns></returns>
-        public bool Add(string key, object value, TimeSpan expiresIn, bool isSliding = false)
+        public bool Set(string key, object value, TimeSpan expiresIn, bool isSliding = false)
         {
             if (key == null)
             {
@@ -217,7 +217,7 @@ namespace BISM.OS.Cache
             if (Exists(key))
                 if (!Remove(key)) return false;
 
-            return Add(key, value);
+            return Set(key, value);
 
         }
         /// <summary>
@@ -241,7 +241,7 @@ namespace BISM.OS.Cache
             if (Exists(key))
                 if (!Remove(key)) return false;
 
-            return Add(key, value, expiresSliding, expiressAbsoulte);
+            return Set(key, value, expiresSliding, expiressAbsoulte);
         }
         /// <summary>
         /// 修改缓存
@@ -264,7 +264,7 @@ namespace BISM.OS.Cache
             if (Exists(key))
                 if (!Remove(key)) return false;
 
-            return Add(key, value, expiresIn, isSliding);
+            return Set(key, value, expiresIn, isSliding);
         }
 
         #endregion

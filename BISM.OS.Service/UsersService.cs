@@ -1,4 +1,5 @@
-﻿using BISM.OS.Entity;
+﻿using BISM.OS.Common;
+using BISM.OS.Entity;
 using BISM.OS.IRepository;
 using BISM.OS.IService;
 using System;
@@ -16,6 +17,7 @@ namespace BISM.OS.Service
             _usersRepository = usersRepository;
         }
 
+        [Cache(ExpireDate = 30)]
         public int Add(Users entity)
         {
             return _usersRepository.Add(entity);
